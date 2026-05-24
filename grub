@@ -1,11 +1,3 @@
-# Default menu entry
-#GRUB_DEFAULT=0
-
-# Boot the default entry this many seconds after the menu is displayed
-#GRUB_TIMEOUT=5
-#GRUB_TIMEOUT_STYLE=menu
-
-
 # Main GRUB boot parameters for Gentoo Linux
 GRUB_DISTRIBUTOR="Gentoo"
 
