@@ -1,0 +1,40 @@
+# /etc/fstab: static file system information.
+#
+# See the manpage fstab(5) for more information.
+#
+# NOTE: The root filesystem should have a pass number of either 0 or 1.
+#       All other filesystems should have a pass number of 0 or greater than 1.
+#
+# NOTE: Even though we list ext4 as the type here, it will work with ext2/ext3
+#       filesystems.  This just tells the kernel to use the ext4 driver.
+#
+# NOTE: You can use full paths to devices like /dev/sda3, but it is often
+#       more reliable to use filesystem labels or UUIDs. See your filesystem
+#       documentation for details on setting a label. To obtain the UUID, use
+#       the blkid(8) command.
+
+# <fs>			<mountpoint>	<type>		<opts>		<dump> <pass>
+
+#LABEL=boot		/boot		ext4		defaults	1 2
+#UUID=58e72203-57d1-4497-81ad-97655bd56494		/		xfs		defaults		0 1
+#LABEL=swap		none		swap		sw		0 0
+#/dev/cdrom		/mnt/cdrom	auto		noauto,ro	0 0
+
+
+# Fizyczna partycja /boot (nieszyfrowana, ext2)
+UUID=914a4e98-c832-4af4-8dc7-01aceffc17f7          /boot           ext2            noatime         1 2
+
+# Partycja EFI systemu Windows 11
+UUID=68F6-5F85          /boot/efi       vfat            noatime         0 2
+
+# Zaszyfrowany główny system plików (Root)
+/dev/mapper/crypt_root  /               ext4            noatime         0 0
+
+# Zaszyfrowana partycja /var
+/dev/mapper/crypt_var   /var            ext4            noatime         0 2
+
+# Zaszyfrowany RAID1 /home
+/dev/mapper/crypt_home  /home           xfs             noatime         0 2
+
+# Zaszyfrowana przestrzeń wymiany SWAP
+/dev/mapper/crypt_swap  none            swap            sw              0 0
