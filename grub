@@ -20,7 +20,6 @@ GRUB_TIMEOUT=30
 GRUB_DEVICE="/dev/mapper/crypt_root"
 
 # Kernel boot flags (KMS for NVIDIA and LUKS/RAID activation in initramfs)
-#GRUB_CMDLINE_LINUX_DEFAULT="rd.luks.uuid=4cb5dd29-9fca-4ea8-9737-a11e77839987 rd.md=1 nvidia-drm.modeset=1"
 GRUB_CMDLINE_LINUX_DEFAULT="rd.luks.uuid=4cb5dd29-9fca-4ea8-9737-a11e77839987 rd.md=1 nvidia-drm.modeset=1"
 
 # Enable os-prober for dual-boot with Windows 11
