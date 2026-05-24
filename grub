@@ -1,0 +1,31 @@
+# Default menu entry
+#GRUB_DEFAULT=0
+
+# Boot the default entry this many seconds after the menu is displayed
+#GRUB_TIMEOUT=5
+#GRUB_TIMEOUT_STYLE=menu
+
+
+# Główne parametry rozruchu GRUB dla Gentoo Linux
+GRUB_DISTRIBUTOR="Gentoo"
+
+# Default menu entry
+GRUB_DEFAULT=2
+
+# Boot the default entry this many seconds after the menu is displayed
+GRUB_TIMEOUT=30
+#GRUB_TIMEOUT_STYLE=menu
+
+# Jawne wskazanie urządzenia głównego (Wyłącza błędne PARTUUID=)
+GRUB_DEVICE="/dev/mapper/crypt_root"
+
+# Flagi startowe jądra (KMS dla NVIDIA oraz aktywacja LUKS i RAID w initramfs)
+#GRUB_CMDLINE_LINUX_DEFAULT="rd.luks.uuid=4cb5dd29-9fca-4ea8-9737-a11e77839987 rd.md=1 nvidia-drm.modeset=1"
+GRUB_CMDLINE_LINUX_DEFAULT="rd.luks.uuid=4cb5dd29-9fca-4ea8-9737-a11e77839987 rd.md=1 nvidia-drm.modeset=1"
+
+# Włączenie os-prober dla dual-boot z Windows 11
+GRUB_DISABLE_OS_PROBER=false
+
+# Konfiguracja wyświetlania dla monitora 1440p i dużej czcionki Cascadia
+GRUB_GFXMODE=2560x1440
+GRUB_FONT="/boot/grub/cascadia48.pf2"
