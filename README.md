@@ -22,7 +22,7 @@ My personal Gentoo Linux configuration files, optimized for the Intel Core Ultra
 
 Clone this repository:
 ```bash
-git clone https://github.com
+git clone https://github.com/tabaluga-crypto/gentoo-config/tree/main
 ```
 
 ## 📝 License
