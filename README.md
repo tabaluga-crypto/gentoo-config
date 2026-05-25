@@ -12,10 +12,9 @@ My personal Gentoo Linux configuration files, optimized for the Intel Core Ultra
 
 ## 🛠️ Highlights & Features
 *   **Arrow Lake Optimizations:** Fine-tuned `march=arrowlake` and `COMMON_FLAGS` in `make.conf` to effectively leverage the hybrid Performance/Efficient core design.
-*   **Blackwell GPU Setup:** Pre-configured `VIDEO_CARDS="nvidia"` with the mandatory `USE="kernel-open"` flag required for modern RTX 50-series hardware support.
+*   **Blackwell GPU Support:** Pre-configured modern `VIDEO_CARDS="nvidia"` optimized for the RTX 50-series architectural shift using open-source kernel modules (`USE="modules"`).
 *   **Sway & Wayland Ready:** Pure Wayland environment; X11 dependencies and bloat stripped globally.
 *   **LUKS Encryption:** Pre-configured secure disk encryption layout handled cleanly via OpenRC `dmcrypt`.
-*   **Clean Portage Structure:** Split configuration using structured directories for `package.use/`, `package.accept_keywords/`, and `package.mask/`.
 
 ## 🚀 How to Use
 > ⚠️ **Warning:** Do not blindly copy these files. Review them thoroughly and adjust the configurations to match your precise storage layout and peripheral components.
