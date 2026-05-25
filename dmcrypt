@@ -1,0 +1,11 @@
+# /etc/conf.d/dmcrypt: Konfiguracja wolumenów LUKS pod OpenRC
+
+target=crypt_var
+source='/dev/disk/by-uuid/9e3f6fa0-ffbe-4925-b413-1cf5ea1f497a'
+
+target=crypt_swap
+source='/dev/disk/by-uuid/49611404-a282-4b62-9502-4878f2feab50'
+
+target=crypt_home
+source='/dev/disk/by-uuid/60486db9-6d06-47c2-800b-047f0fb4961a'
+rc_before="fsck"
